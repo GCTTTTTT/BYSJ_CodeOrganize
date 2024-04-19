@@ -1,0 +1,14 @@
+// mBert-Bi-LSTM-Self-Attention Model
+digraph {
+	input [label="Input Text" shape=rectangle]
+	bert [label="BERT Encoder" shape=rectangle]
+	input -> bert [label="input_ids, attention_mask"]
+	bilstm [label="Bi-LSTM" shape=rectangle]
+	bert -> bilstm [label=last_hidden_state]
+	attention [label="Self-Attention" shape=rectangle]
+	bilstm -> attention [label=lstm_outputs]
+	output [label="Output Layer" shape=rectangle]
+	attention -> output [label=attention_outputs]
+	classification [label=Classification shape=circle]
+	output -> classification [label=logits]
+}

@@ -1,0 +1,59 @@
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at ./wwm_uncased_L-24_H-1024_A-16 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Category Counts:
+রাজনীতি       12278
+বিনোদন        12278
+খেলাধুলা      12278
+আর্কাইভ       12278
+লাইফস্টাইল    12278
+অন্যান্য      12278
+অর্থনীতি      12278
+আইন           12278
+বিজ্ঞান       12278
+শিক্ষা        12278
+Name: category1, dtype: int64
+{'খেলাধুলা': 0, 'রাজনীতি': 1, 'বিনোদন': 2, 'অর্থনীতি': 3, 'আর্কাইভ': 4, 'আইন': 5, 'শিক্ষা': 6, 'অন্যান্য': 7, 'বিজ্ঞান': 8, 'লাইফস্টাইল': 9}
+10
+before
+No NaN values in the 'category1' column.
+after
+No NaN values in the 'category1' column.
+['i', 'have', 'a', 'good', 'time', ',', 'thank', 'you', '.']
+cuda
+Training:   0%|          | 0/1343 [00:00<?, ?it/s]Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+/opt/conda/envs/default/lib/python3.8/site-packages/transformers/tokenization_utils_base.py:2619: FutureWarning: The `pad_to_max_length` argument is deprecated and will be removed in a future version, use `padding=True` or `padding='longest'` to pad to the longest sequence in the batch, or use `padding='max_length'` to pad to a max length. In this case, you can give a specific length with `max_length` (e.g. `max_length=45`) or leave max_length to None to pad to the maximal input size of the model (e.g. 512 for Bert).
+  warnings.warn(
+                                                  Traceback (most recent call last):
+  File "bert-large-classification-server-undersampled.py", line 225, in <module>
+    train_loss = train_epoch(model, train_loader, optimizer, device)
+  File "bert-large-classification-server-undersampled.py", line 176, in train_epoch
+    outputs = model(input_ids, attention_mask=attention_mask, labels=labels)
+  File "/opt/conda/envs/default/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/opt/conda/envs/default/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 1564, in forward
+    outputs = self.bert(
+  File "/opt/conda/envs/default/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/opt/conda/envs/default/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 1013, in forward
+    encoder_outputs = self.encoder(
+  File "/opt/conda/envs/default/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/opt/conda/envs/default/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 607, in forward
+    layer_outputs = layer_module(
+  File "/opt/conda/envs/default/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/opt/conda/envs/default/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 539, in forward
+    layer_output = apply_chunking_to_forward(
+  File "/opt/conda/envs/default/lib/python3.8/site-packages/transformers/pytorch_utils.py", line 236, in apply_chunking_to_forward
+    return forward_fn(*input_tensors)
+  File "/opt/conda/envs/default/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 551, in feed_forward_chunk
+    intermediate_output = self.intermediate(attention_output)
+  File "/opt/conda/envs/default/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/opt/conda/envs/default/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 452, in forward
+    hidden_states = self.intermediate_act_fn(hidden_states)
+  File "/opt/conda/envs/default/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/opt/conda/envs/default/lib/python3.8/site-packages/transformers/activations.py", line 79, in forward
+    return self.act(input)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB (GPU 0; 23.69 GiB total capacity; 12.28 GiB already allocated; 120.94 MiB free; 12.31 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

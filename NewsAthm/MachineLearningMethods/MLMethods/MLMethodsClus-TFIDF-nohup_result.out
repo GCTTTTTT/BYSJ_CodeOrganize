@@ -1,0 +1,102 @@
+16
+0
+0
+0
+KNN Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.94      0.88      0.91      2481
+           1       0.86      0.86      0.86      2451
+           2       0.87      0.81      0.84      2473
+           3       0.84      0.73      0.78      2517
+           4       0.87      0.88      0.88      2474
+           5       0.85      0.85      0.85      2476
+           6       0.66      0.80      0.72      2449
+           7       0.85      0.75      0.80      2390
+           8       0.76      0.87      0.81      2387
+
+    accuracy                           0.83     22098
+   macro avg       0.83      0.83      0.83     22098
+weighted avg       0.83      0.83      0.83     22098
+
+SVM Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.99      0.96      0.97      2481
+           1       0.93      0.91      0.92      2451
+           2       0.95      0.93      0.94      2473
+           3       0.86      0.86      0.86      2517
+           4       0.90      0.94      0.92      2474
+           5       0.92      0.91      0.91      2476
+           6       0.90      0.92      0.91      2449
+           7       0.92      0.89      0.90      2390
+           8       0.89      0.91      0.90      2387
+
+    accuracy                           0.92     22098
+   macro avg       0.92      0.92      0.92     22098
+weighted avg       0.92      0.92      0.92     22098
+
+RandomForest Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.97      0.93      0.95      2481
+           1       0.84      0.92      0.88      2451
+           2       0.87      0.92      0.89      2473
+           3       0.86      0.74      0.80      2517
+           4       0.88      0.92      0.90      2474
+           5       0.84      0.86      0.85      2476
+           6       0.89      0.91      0.90      2449
+           7       0.88      0.84      0.86      2390
+           8       0.87      0.84      0.86      2387
+
+    accuracy                           0.88     22098
+   macro avg       0.88      0.88      0.88     22098
+weighted avg       0.88      0.88      0.88     22098
+
+XGBOOST Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.98      0.95      0.96      2481
+           1       0.92      0.92      0.92      2451
+           2       0.94      0.93      0.94      2473
+           3       0.85      0.86      0.85      2517
+           4       0.92      0.93      0.92      2474
+           5       0.90      0.91      0.91      2476
+           6       0.92      0.94      0.93      2449
+           7       0.92      0.90      0.91      2390
+           8       0.90      0.90      0.90      2387
+
+    accuracy                           0.92     22098
+   macro avg       0.92      0.92      0.92     22098
+weighted avg       0.92      0.92      0.92     22098
+
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 1.065976 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 611861
+[LightGBM] [Info] Number of data points in the train set: 88388, number of used features: 8678
+[LightGBM] [Info] Start training from score -2.200273
+[LightGBM] [Info] Start training from score -2.196908
+[LightGBM] [Info] Start training from score -2.198946
+[LightGBM] [Info] Start training from score -2.203341
+[LightGBM] [Info] Start training from score -2.198946
+[LightGBM] [Info] Start training from score -2.199252
+[LightGBM] [Info] Start training from score -2.196603
+[LightGBM] [Info] Start training from score -2.190414
+[LightGBM] [Info] Start training from score -2.190414
+LightGBM Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.98      0.96      0.97      2481
+           1       0.92      0.91      0.92      2451
+           2       0.94      0.93      0.94      2473
+           3       0.87      0.86      0.86      2517
+           4       0.92      0.94      0.93      2474
+           5       0.91      0.91      0.91      2476
+           6       0.92      0.95      0.93      2449
+           7       0.93      0.91      0.92      2390
+           8       0.90      0.90      0.90      2387
+
+    accuracy                           0.92     22098
+   macro avg       0.92      0.92      0.92     22098
+weighted avg       0.92      0.92      0.92     22098
+
